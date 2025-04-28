@@ -1,0 +1,1 @@
+void displayStructureData( ST_DATA_INFO *data);

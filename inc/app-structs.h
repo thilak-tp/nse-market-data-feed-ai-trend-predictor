@@ -29,8 +29,8 @@ struct ST_INFO_TRAILER {
     char cEOT;          // End of Transmission character ('\r')
 };
 
-// Example Data Info Structure (Online Touchline Market Update)
-struct ST_DATA_INFO_TOUCHLINE {
+// NSE L1 Data Structure
+struct ST_DATA_INFO {
     char sSymbol[SYMBOL_SIZE];                               // Security symbol
     char sSeries[SERIES_SIZE];                               // Series identifier
     char sOpenPrice[OPEN_PRICE_SIZE];                        // Opening price
@@ -49,7 +49,7 @@ struct ST_DATA_INFO_TOUCHLINE {
 // Complete Data Packet
 struct ST_DATA_PACKET {
     ST_INFO_HEADER stInfoHdr;          // Info header
-    ST_DATA_INFO_TOUCHLINE stDataInfo; // Market data
+    ST_DATA_INFO stDataInfo; // Market data
     ST_INFO_TRAILER stInfoTrailer;     // Info trailer
 };
 
